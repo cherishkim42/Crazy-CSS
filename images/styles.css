@@ -1,3 +1,15 @@
+@keyframes eye-move {
+    0%  { left: 40px ;}
+    50% { left: 70px ;}
+    100%    { left: 40px ; }
+}
+
+@keyframes pupil-move {
+    0% { left: 15px ;}
+    50% { left: 30px ;}
+    100% { left: 15px ;}
+}
+
 #eye {
     position: relative; /* Do it exactly as you would normally do it but I have the position tag*/
     left: 40px;
@@ -20,7 +32,10 @@
     width: 80px;
     height: 80px;
     background: blueviolet;
-    border-radius: 50%
+    border-radius: 50%;
+    animation-name: eye-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 #pupil {
@@ -30,5 +45,8 @@
     width: 30px;
     height: 30px;
     background: black;
-    border-radius: 50%
+    border-radius: 50%;
+    animation-name: pupil-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
