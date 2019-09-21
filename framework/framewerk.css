@@ -1,11 +1,12 @@
 /* keyword for root element on CSS - you could use :root for html or body tag and it'd basically be the same thing. */
 /* So, putting 'font-family' in here will be used by body tags */
 /* These CSS variables are LIVE (as opposed to sass, which needs to be compiled) */
+
 :root {
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-size: 18px;
-    --bg-color: rgb(33, 33, 33);
-    --fg-color: rgb(239,239,239);
+    --fg-color: rgb(33, 33, 33); /*background color*/
+    --bg-color: rgb(239,239,239); /*foreground color*/
 }
 
 body {
@@ -44,7 +45,6 @@ h6 {
 
 }
 
-/* highlight! */
-mark {
-    background-color: rgba(255, 0, 255, 0.25)
+mark { /*highlight*/
+    background-color:  rgba(255, 0, 255, 0.25);
 }
