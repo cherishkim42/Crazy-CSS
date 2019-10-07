@@ -7,14 +7,50 @@
     <link href="framewerk.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
-
-
 </head>
 
 <body>
-    <!-- I added these inline styles to make this easy to read feel free 
-  to edit or remove -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#"><strong>Framework</strong></a></li>
+        </ul>
+        <ul><li><a href="#link">Link 1</a></li></ul>
+    </nav>
+
+    <div class="wrapper">
+        <h1>Text Input</h1>
+        <form><input type="text" placeholder="Type Here"></form>
+        <br><hr>
+
+        <h1>Radio Button Inputs</h1>
+        <form>
+            <strong>Pick a radio, any radio!</strong><br>
+            <input type="radio" name="options" value="1">Radio #1<br>
+            <input type="radio" name="options" value="2">Radio #2<br>
+            <input type="radio" name="options" value="3">Radio #3<br><br>
+            <strong>Assortment of Netflix Originals</strong><br>
+            <input type="radio" name="choices" value="boj">Bojack Horseman<br>
+            <input type="radio" name="choices" value="sense8">Sense8<br>
+            <input type="radio" name="choices" value="bm">Black Mirror<br>
+        </form>
+        <br><hr>
+
+        <h1>Checkboxes</h1>
+        <label class="container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>Checkbox #1
+        </label><br>
+        <label class="container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>Checkbox #2
+        </label><br>
+        <label class="container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>Checkbox #42
+        </label>
+
+    </div>
+
     <div class="wrapper">
         <h1>Typography Sample</h1>
 
@@ -325,3 +361,15 @@ etc.
             <p>This paragraph uses the regular/default styles.</p>
             <p class="text-muted">This paragraph uses the <code>.text-muted</code> class.</p>
         </div>
+        <br>
+        <br>
+    </div>
+
+<footer class="footer">
+    <ul>
+        <a href="#">Link 1</a>
+    </ul>
+    <ul>
+        <a href="#">Link 2</a>
+    </ul>
+</footer>

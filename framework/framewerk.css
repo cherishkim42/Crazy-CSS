@@ -11,7 +11,11 @@
     --bg-color: #fbfffe; /*background color*/
     --fg-color: #373737;/*foreground color*/
     --bold-color: #03120E;
-    --hover-color: #F16889;
+    --cursor-highlight-color: #F16889;
+    --hoverlink-color: #56A3A6;
+    --muted-color: #6d6d6d;
+    --standout-static-color: #C65671;
+    --quiet-static-color: #F69EB3;
 }
 
 body {
@@ -66,15 +70,15 @@ a {
 }
 
 a:link {
-    color: #C65671;
+    color: var(--standout-static-color);
 }
 
 a:visited {
-    color: #F69EB3;
+    color: var(--quiet-static-color);
 }
 
 a:hover {
-    color: #56A3A6;
+    color: var(--hoverlink-color);
 }
 
 abbr {
@@ -111,6 +115,13 @@ del {
     font-weight: 250;
 }
 
+input {
+    color: var(--fg-color);
+    background: var(--bg-color);
+    padding: 15px;
+    font-size: 1em;
+}
+
 s {
     color: var(--bold-color);
     font-weight: 250;
@@ -130,8 +141,48 @@ em {
     font-style: oblique;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--fg-color);
+    color: var(--bg-color);
+}
+
+.footer ul {
+    padding: 5px;
+    text-decoration: none;
+}
+
+.footer ul li {
+    padding: 5px;
+    text-decoration: none;
+}
+
 hr {
     border-top: 1px dotted var(--fg-color);
+}
+
+.navbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--muted-color);
+}
+
+.navbar ul {
+    list-style-type: none;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.navbar li {
+    margin: 5px;
+    padding: 5px;
 }
 
 .lead {
@@ -141,7 +192,7 @@ hr {
 }
 
 .text-muted {
-    color: #6d6d6d;
+    color: var(--muted-color);
 }
 
 .wrapper {
@@ -150,5 +201,5 @@ hr {
 }
 
 ::selection {
-    background: var(--hover-color);
+    background: var(--cursor-highlight-color);
 }
