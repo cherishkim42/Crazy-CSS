@@ -3,48 +3,152 @@
 /* These CSS variables are LIVE (as opposed to sass, which needs to be compiled) */
 
 :root {
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-size: 18px;
-    --fg-color: rgb(33, 33, 33); /*background color*/
-    --bg-color: rgb(239,239,239); /*foreground color*/
+    --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* --font-family: 'Homemade Apple', cursive; */
+    --font-head: 'Alegreya', serif;
+    --font-size: 20px;
+    --font-line-height: 1.5em;
+    --bg-color: #fbfffe; /*background color*/
+    --fg-color: #373737;/*foreground color*/
+    --bold-color: #03120E;
+    --hover-color: #F16889;
 }
 
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
-    line-height: 1.5em;
+    line-height: var(--font-line-height);
     background-color: var(--bg-color);
     color: var(--fg-color);
 }
 
 h1 {
+    font-family: var(--font-head);
     font-size: 2.5em;
+    color: var(--bold-color);
 }
 
 h2 {
+    font-family: var(--font-head);
     font-size: 2em;
+    color: var(--bold-color);
 }
 
 h3 {
+    font-family: var(--font-head);
     font-size: 1.75em;
+    color: var(--bold-color);
 }
 
 h4 {
+    font-family: var(--font-head);
     font-size: 1.5em;
+    color: var(--bold-color);
 }
 
 h5 {
+    font-family: var(--font-head);
     font-size: 1.25em;
     font-weight: 400;
+    color: var(--bold-color);
 }
 
 h6 {
+    font-family: var(--font-head);
     font-size: 1em;
     font-weight: 400;
     border-bottom: 1px solid;
+    color: var(--bold-color);
+}
 
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #C65671;
+}
+
+a:visited {
+    color: #F69EB3;
+}
+
+a:hover {
+    color: #56A3A6;
+}
+
+abbr {
+    font-family: var(--font-head);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+blockquote {
+    background: #ececec;
+    border-left: 15px solid #dadada;
+    margin: 0.5em 15px;
+    padding: 0.5em 15px;
+}
+
+blockquote cite {
+    font-family: var(--font-head);
+    color: var(--fg-color);
+    font-weight: 700;
+    font-style: normal;
+}
+
+blockquote p {
+    color: #6d6d6d;
+}
+
+code {
+    background: #EAF2F6;
+    color: #1C5F88;
+}
+
+del {
+    color: #a4a4a4;
+    font-weight: 250;
+}
+
+s {
+    color: var(--bold-color);
+    font-weight: 250;
 }
 
 mark { /*highlight*/
-    background-color:  rgba(255, 0, 255, 0.25);
+    background-color:  #F7ABBD;
+}
+
+strong {
+    font-weight: extra bold;
+    color: var(--bold-color);
+}
+
+em {
+    font-weight: 200;
+    font-style: oblique;
+}
+
+hr {
+    border-top: 1px dotted var(--fg-color);
+}
+
+.lead {
+    color: var(--fg-color);
+    font-weight: 500 !important;
+    font-size: 26px !important;
+}
+
+.text-muted {
+    color: #6d6d6d;
+}
+
+.wrapper {
+    padding: 70px;
+    margin: 20px;
+}
+
+::selection {
+    background: var(--hover-color);
 }
