@@ -1,0 +1,287 @@
+/* keyword for root element on CSS - you could use :root for html or body tag and it'd basically be the same thing. */
+/* So, putting 'font-family' in here will be used by body tags */
+/* These CSS variables are LIVE (as opposed to sass, which needs to be compiled) */
+
+:root {
+    --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* --font-family: 'Homemade Apple', cursive; */
+    --font-head: 'Alegreya', serif;
+    --font-size: 20px;
+    --font-line-height: 1.5em;
+    --bg-color: #fbfffe; /*background color*/
+    --fg-color: #373737;/*foreground color*/
+    --bold-color: #03120E;
+    --cursor-highlight-color: #F16889;
+    --hoverlink-color: #56A3A6;
+    --muted-color: #6d6d6d;
+    --standout-static-color: #C65671;
+    --quiet-static-color: #F69EB3;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--font-line-height);
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: 2.5em;
+    color: var(--bold-color);
+}
+
+h2 {
+    font-family: var(--font-head);
+    font-size: 1em;
+    color: var(--bold-color);
+}
+
+h3 {
+    font-family: var(--font-head);
+    font-size: 5em;
+    line-height: 1.05em !important;
+    color: var(--bold-color);
+}
+
+h4 {
+    font-family: var(--font-head);
+    font-size: 1.5em;
+    color: var(--bold-color);
+}
+
+h5 {
+    font-family: var(--font-head);
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--bold-color);
+}
+
+h6 {
+    font-family: var(--font-head);
+    font-size: 1em;
+    font-weight: 400;
+    border-bottom: 1px solid;
+    color: var(--bold-color);
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--standout-static-color);
+}
+
+a:visited {
+    color: var(--quiet-static-color);
+}
+
+a:hover {
+    color: var(--hoverlink-color);
+}
+
+abbr {
+    font-family: var(--font-head);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+blockquote {
+    background: #ececec;
+    border-left: 15px solid #dadada;
+    margin: 0.5em 15px;
+    padding: 0.5em 15px;
+}
+
+blockquote cite {
+    font-family: var(--font-head);
+    color: var(--fg-color);
+    font-weight: 700;
+    font-style: normal;
+}
+
+blockquote p {
+    color: #6d6d6d;
+}
+
+button {
+    background-color: navy;
+    color: white;
+    border-radius: 40%;
+}
+
+code {
+    background: #EAF2F6;
+    color: #1C5F88;
+}
+
+del {
+    color: #a4a4a4;
+    font-weight: 250;
+}
+
+input {
+    color: var(--fg-color);
+    background: var(--bg-color);
+    padding: 15px;
+    font-size: 1em;
+}
+
+s {
+    color: var(--bold-color);
+    font-weight: 250;
+}
+
+li {
+    text-decoration: none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+mark { /*highlight*/
+    background-color:  #F7ABBD;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--muted-color);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+strong {
+    font-weight: extra bold;
+    color: var(--bold-color);
+    font-size: 5em !important;
+    line-height: 0.9em;
+}
+
+em {
+    font-weight: 200;
+    font-style: oblique;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-container > div {
+    align-items: center;
+}
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--fg-color);
+    color: var(--bg-color);
+}
+
+.footer ul {
+    padding: 5px;
+    text-decoration: none;
+}
+
+.footer ul li {
+    padding: 5px;
+    text-decoration: none;
+}
+
+hr {
+    border-top: 1px dotted var(--fg-color);
+}
+
+.logo {
+    display: flex;
+    margin: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--fg-color);
+    color: var(--standout-static-color);
+}
+
+/*
+
+.navbar ul {
+    list-style-type: none;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.navbar li {
+    margin: 5px;
+    padding: 5px;
+} */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.lead {
+    color: var(--fg-color);
+    font-weight: 500 !important;
+    font-size: 26px !important;
+}
+
+.text-muted {
+    color: var(--muted-color);
+}
+
+.wrapper {
+    padding: 70px;
+    margin: 20px;
+}
+
+::selection {
+    background: var(--cursor-highlight-color);
+}
