@@ -24,6 +24,7 @@ body {
     line-height: var(--font-line-height);
     background-color: var(--bg-color);
     color: var(--fg-color);
+    margin: 0; /*Need this to prevent header from having that annoying little bit of space*/
 }
 
 h1 {
@@ -111,7 +112,11 @@ blockquote p {
 button {
     background-color: navy;
     color: white;
-    border-radius: 40%;
+    border-radius: 18px;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 code {
@@ -157,6 +162,11 @@ nav {
     margin: 0px;
 }
 
+section {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 strong {
     font-weight: extra bold;
     color: var(--bold-color);
@@ -169,6 +179,14 @@ em {
     font-style: oblique;
 }
 
+.dot {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: var(--quiet-static-color);
+    border-radius: 50%;
+    display: inline-block;
+}
 
 .nav-links {
     list-style: none;
@@ -199,8 +217,6 @@ em {
 .flex-container > div {
     align-items: center;
 }
-
-
 
 .footer {
     position: fixed;
@@ -256,16 +272,60 @@ hr {
 } */
 
 .nav-links {
+    position: relative;
     list-style: none;
     display: flex;
     align-items: center;
+    flex-direction: row; /*not column?*/
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .nav-item a {
+    position: relative;
     display: inline-block;
     padding: 10px 15px;
     text-decoration: none;
 }
+
+.bubble {
+  position:absolute;
+  left:50%; top:50%; margin:-5rem;
+  transition: all .2s ease-in-out;
+  z-index:1000; 
+  position:absolute; 
+  font-size: 4.8rem; 
+  width:10rem; 
+  height:10rem; 
+  line-height:10rem; 
+  color:#fff; 
+  background-color:#c66; 
+  border-radius:50%;  
+  text-align:center; 
+  cursor:pointer;}
+
+.bubble:hover {
+  background-color:#D4D37F; }
+
+.bubble:before {
+  position:absolute; 
+  background-color:#D4D37F; 
+  opacity:0.5; 
+  content:''; 
+  width:0rem; 
+  height:0rem; 
+  left:50%; 
+  margin-left:0; 
+  bottom:5rem; 
+  border-radius:50%; 
+  transition: all .2s ease-in-out;
+  z-index:-1;}
+
+.bubble:hover::before {
+  width:15rem; 
+  height:15rem; 
+  margin-left:-7.5rem; 
+  bottom:-2.5rem; }
 
 .lead {
     color: var(--fg-color);
